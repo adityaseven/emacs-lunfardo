@@ -14,3 +14,11 @@
   :description "Emacs' desktop wiki built with org-mode"
   :features org-wiki
   )
+
+(defun get-latest-git-pull ()
+  (setq org-home-path (concat (getenv "HOME") ".orgwiki" ))
+  (message org-home-path))
+
+ (add-hook 'org-mode-hook
+   (lambda ()
+   (add-hook 'find-file-hook 'get-latest-git-pull nil 'make-it-local)))
