@@ -4,7 +4,13 @@
   :config
   (add-hook 'org-mode-hook (lambda ()
                            (org-bullets-mode 1)))
-  :ensure t)
+  :defer t)
 
 (use-package org-present
-  :ensure t)
+  :defer t)
+
+(el-get-bundle org-wiki
+  :url "https://raw.githubusercontent.com/caiorss/org-wiki/master/org-wiki.el"
+  :description "Emacs' desktop wiki built with org-mode"
+  :features org-wiki
+  )

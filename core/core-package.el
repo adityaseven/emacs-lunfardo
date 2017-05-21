@@ -13,4 +13,11 @@
 
 (require 'use-package)
 
+(use-package el-get
+  :ensure t)
+
+(add-to-list 'load-path   "/Users/aditya/.emacs.d/el-get/benchmark-init-el/")
+(require 'benchmark-init-loaddefs)
+(benchmark-init/activate)
+
 (provide 'core-package)
